@@ -9,7 +9,7 @@ public class PenjumlahanRekursif {
 
         System.out.println("Jumlah Deret Angka: ");
         tampilJumlah(angka);
-        System.out.println("\b =" + penjumlahanRekursif(angka));
+        System.out.println("\b = " + penjumlahanRekursif(angka));
     }
     
     static int penjumlahanRekursif(int n) {
@@ -17,7 +17,7 @@ public class PenjumlahanRekursif {
         if (n == 0) {
             temp = n;
         } else {
-            temp = n + penjumlahanRekursif(n - 1);
+            temp += penjumlahanRekursif(n - 1);
         }
         return temp;
     }
@@ -28,7 +28,7 @@ public class PenjumlahanRekursif {
         } else {
             tampilJumlah(n - 1);
             System.out.print(n);
-            if (n > 1) {
+            if (n >= 1) {
                 System.out.print("+");
             }
         }
